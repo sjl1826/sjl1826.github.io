@@ -83,7 +83,8 @@
       <div class="col-xs-12 col-md-6"> <img src="img/about.jpg" class="img-responsive" alt=""> </div>
       <div class="col-xs-12 col-md-6">
         <div class="about-text">
-          <p>Software Engineer. Mobile Developer. Machine Learning Scientist. Web Developer. Ultimately, I am a Computer Science Enthusiast. Teacher. Student. Friend. I am all of these. I love to code, I love to teach, and I certainly enjoy composing my sentences in parallel structure and repetition. :)</p>
+          <p>Software Engineer. Mobile Developer. Machine Learning Scientist. Web Developer. Ultimately, I am a Computer Science Enthusiast.</p>
+            <p>Teacher. Student. Friend. I am all of these. I love to code, I love to teach, and I certainly enjoy composing my sentences in parallel structure and repetition. :)</p>
           <p>My name is Samuel Lee and I am a first year Computer Science Major at University of California, Los Angeles, otherwise known as UCLA. I am a fan of many things, including sports (Go Lakers), programming, and music. If you were to walk into my room, you'd catch me working on a personal project, watching Brazilian Jiu Jitsu videos, or producing songs on my MIDI. That's me compiled into a paragraph.</p>
           <a href="https://github.com/sjl1826" class="btn btn-primary btn-lg page-scroll">My Projects</a> </div>
       </div>
