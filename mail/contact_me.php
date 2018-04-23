@@ -1,20 +1,6 @@
 <?php
 require 'PHPMailer/PHPMailerAutoload.php';
 
-// Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-	echo "No arguments Provided!";
-	return false;
-   }
-	
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-
 $mail = new PHPMailer;
 
 $mail->isSMTP();                            // Set mailer to use SMTP
@@ -27,16 +13,16 @@ $mail->Port = 587;                          // TCP port to connect to
 
 $mail->setFrom('info@example.com', 'CodexWorld');
 $mail->addReplyTo('info@example.com', 'CodexWorld');
-$mail->addAddress('samlee.csit@gmail.com');   // Add a recipient
+$mail->addAddress('john@gmail.com');   // Add a recipient
 $mail->addCC('cc@example.com');
 $mail->addBCC('bcc@example.com');
 
 $mail->isHTML(true);  // Set email format to HTML
 
-$bodyContent = '<h1>Website Contact Form: $name</h1>';
-$bodyContent .= '<p>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message</p>';
+$bodyContent = '<h1>How to Send Email using PHP in Localhost by CodexWorld</h1>';
+$bodyContent .= '<p>This is the HTML email sent from localhost using PHP script by <b>CodexWorld</b></p>';
 
-$mail->Subject = 'Website Contact Form: $name';
+$mail->Subject = 'Email from Localhost by CodexWorld';
 $mail->Body    = $bodyContent;
 
 if(!$mail->send()) {
@@ -45,9 +31,7 @@ if(!$mail->send()) {
 } else {
     echo 'Message has been sent';
 }
-
-
-
+?>
 
 // $mail = new PHPMailer;
 
@@ -69,4 +53,3 @@ if(!$mail->send()) {
 // mail($to,$email_subject,$email_body,$headers);
 // return true;			
 // ?>
-?>
