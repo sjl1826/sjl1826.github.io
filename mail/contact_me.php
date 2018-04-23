@@ -25,14 +25,16 @@ $mail->Password = 'samuel518'; // SMTP password
 $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                          // TCP port to connect to
 
-$mail->setFrom('noreply@gmail.com', "Website Contact Form:  $name");
-$mail->addReplyTo(email_address, "Website Contact Form:  $name");
+$mail->setFrom('info@example.com', 'CodexWorld');
+$mail->addReplyTo('info@example.com', 'CodexWorld');
 $mail->addAddress('samlee.csit@gmail.com');   // Add a recipient
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 
 $mail->isHTML(true);  // Set email format to HTML
 
 $bodyContent = '<h1>"Website Contact Form: $name"</h1>';
-$bodyContent .= '<p>"You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message"</p>';
+$bodyContent .= '<p>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message</p>';
 
 $mail->Subject = 'Website Contact Form: $name';
 $mail->Body    = $bodyContent;
