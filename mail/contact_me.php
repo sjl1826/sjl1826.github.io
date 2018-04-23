@@ -33,7 +33,7 @@ $mail->addBCC('bcc@example.com');
 
 $mail->isHTML(true);  // Set email format to HTML
 
-$bodyContent = '<h1>"Website Contact Form: $name"</h1>';
+$bodyContent = '<h1>Website Contact Form: $name</h1>';
 $bodyContent .= '<p>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message</p>';
 
 $mail->Subject = 'Website Contact Form: $name';
@@ -69,3 +69,4 @@ if(!$mail->send()) {
 // mail($to,$email_subject,$email_body,$headers);
 // return true;			
 // ?>
+?>
