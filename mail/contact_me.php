@@ -17,7 +17,7 @@ $message = $_POST['message'];
 $mail = new PHPMailer;
 
 $mail->isSMTP();                            // Set mailer to use SMTP
-$mail->Host = 'samlee.csit@gmail.com';             // Specify main and backup SMTP servers
+$mail->Host = 'smpt.gmail.com';             // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                     // Enable SMTP authentication
 $mail->Username = 'samlee@gmail.com';          // SMTP username
 $mail->Password = 'samuel518'; // SMTP password
