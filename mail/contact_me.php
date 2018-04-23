@@ -1,4 +1,5 @@
 <?php
+require 'PHPMailer/PHPMailerAutoload.php';
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -12,7 +13,18 @@ if(empty($_POST['name'])  		||
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $message = $_POST['message'];
-	
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();                            // Set mailer to use SMTP
+$mail->Host = 'samlee.csit@gmail.com';             // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                     // Enable SMTP authentication
+$mail->Username = 'samlee@gmail.com';          // SMTP username
+$mail->Password = 'samuel518'; // SMTP password
+$mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                          // TCP port to connect to
+	$mail->isHTML(true);  // Set email format to HTML
+
 // Create the email and send the message
 $to = 'samlee.csit@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Website Contact Form:  $name";
